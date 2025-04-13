@@ -1,0 +1,55 @@
+
+RESTORE GUIDE — Ai-eigo Project
+Last updated: 2025-03-28
+
+🛠️ HOW TO RESTORE A WORKING SNAPSHOT
+
+If something breaks and you want to go back to the last known good version:
+
+------------------------------------------------------------
+Option 1: Restore from snapshot tag (recommended)
+------------------------------------------------------------
+
+1. Open terminal in your project folder:
+   cd ai-eigo
+
+2. Revert to the last snapshot (tag v1.0 for example):
+   git reset --hard v1.0
+
+⚠️ Warning: This will erase any uncommitted changes!
+
+------------------------------------------------------------
+Option 2: Fresh start by re-cloning the repo
+------------------------------------------------------------
+
+1. Clone the repository:
+   git clone https://github.com/Euthenian/Ai-eigo.git
+
+2. Go into the folder:
+   cd Ai-eigo
+
+3. Check out the tag:
+   git checkout v1.0
+
+4. Install dependencies:
+   npm install
+
+5. Run the dev server:
+   npm run dev
+
+------------------------------------------------------------
+🌟 How to make NEW snapshots (tags)
+------------------------------------------------------------
+
+1. Stage and commit your changes:
+   git add .
+   git commit -m "Stable: your description here"
+
+2. Tag the commit:
+   git tag v1.1 -m "Tag description here"
+
+3. Push everything:
+   git push
+   git push origin v1.1
+
+Keep building, keep snapping!
